@@ -1,0 +1,43 @@
+<%- include('./base/header.ejs') %>
+<div class = "container">
+    <div class="alert bg-success my-3">
+        <h4 class = "text-center" style="color:rgb(244, 241, 240)">Update Student</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form action = '/update/student/<%= student._id %>'method ='post'>
+                <div>
+                    <label for = " "class = "form-label"> Roll No</label>
+                    <input type = "text" name="rollNo" value="<%= student.rollNo %>" class="form-control ">
+                </div>
+                <div>
+                    <label for = " "class = "form-label"> FirstName</label>
+                    <input type = "text" name="firstName" value="<%= student.firstName %>" class="form-control ">
+                </div>
+                <div>
+                    <label for = " "class = "form-label"> LastName</label>
+                    <input type = "text" name="lastName" value="<%= student.lastName %>" class="form-control ">
+                </div>
+                <div>
+                    <label for = " "class = "form-label"> FatherName</label>
+                    <input type = "text" name="fatherName" value="<%= student.fatherName %>" class="form-control ">
+                </div>
+                <div>
+                    <label for = " "class = "form-label"> AdharCardNo</label>
+                    <input type = "text" name="adharCardNo" value="<%= student.adharCardNo %>" class="form-control ">
+                </div>
+                <div>
+                    <label for = " "class = "form-label"> MobileNo</label>
+                    <input type = "text" name="mobileNo" value="<%= student.mobileNo %>" class="form-control ">
+                </div>
+                <input type = "submit" value="Update Student"  class="btn btn-warning my-3 w-100"> 
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<%- include('./base/footer.ejs') %>
